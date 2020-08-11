@@ -14,11 +14,13 @@ var budgetController = (function () {
 
 var UIController = (function() {
     return {
-        getInput: function() {
-          var type = document.querySelector('.add__type').value;
-          var desc = document.querySelector('.add__description').value;
-          var value = document.querySelector('.add__value').value;
-        }
+              getInput: function() {
+                return {
+                    type: document.querySelector('.add__type').value,
+                    desc: document.querySelector('.add__description').value,
+                    value: document.querySelector('.add__value').value
+                };
+          }
     };
 })();
 
