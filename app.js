@@ -13,7 +13,13 @@ var budgetController = (function () {
 
 
 var UIController = (function() {
-
+    return {
+        getInput: function() {
+          var type = document.querySelector('.add__type').value;
+          var desc = document.querySelector('.add__description').value;
+          var value = document.querySelector('.add__value').value;
+        }
+    };
 })();
 
 var controller = (function(budgetCtrl, UICtrl) {
@@ -24,7 +30,6 @@ var controller = (function(budgetCtrl, UICtrl) {
         // 3. add the item to the UI
         // 4. calculate budget
         // 5. display new budget on the UI
-        console.log('it works');
 
     }
 
