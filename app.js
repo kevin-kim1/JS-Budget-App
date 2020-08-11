@@ -17,11 +17,17 @@ var UIController = (function() {
 })();
 
 var controller = (function(budgetCtrl, UICtrl) {
-    var z = budgetCtrl.publicTest(5);
-    return {
-      anotherPublicMethod: function() {
-        console.log(z);
-      }
-    }
+    document.querySelector('.add__btn').addEventListener('click', function() {
+        // 1. Get the field data
+        // 2. add the item to budget controller
+        // 3. add the item to the UI
+        // 4. calculate budget
+        // 5. display new budget on the UI
+    });
 
+    document.addEventListener('keypress', function(event) {
+        if(event.keycode === 13 || event.which === 13) {
+            console.log('Enter was pressed!');
+        }
+    });
 })(budgetController, UIController);
