@@ -25,15 +25,18 @@ var UIController = (function() {
                     desc: document.querySelector(DOMStrings.inputDesc).value,
                     value: document.querySelector(DOMStrings.inputValue).value
                 };
-          }
-    };
+              },
+              getDOMStrings: function () {
+                return DOMStrings;
+              }
+          };
 })();
 
 var controller = (function(budgetCtrl, UICtrl) {
+    var DOM = UICtrl.getDOMStrings;
     var ctrlAddItem = function() {
         // 1. Get the field data
         var input = UICtrl.getInput();
-        console.log(input);
         // 2. add the item to budget controller
         // 3. add the item to the UI
         // 4. calculate budget
