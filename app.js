@@ -13,21 +13,27 @@ var budgetController = (function () {
 
 
 var UIController = (function() {
+  var DOMStrings = {
+    inputType: '.add__type',
+    inputDesc: '.add__description',
+    inputValue: '.add__value'
+  }
     return {
               getInput: function() {
                 return {
-                    type: document.querySelector('.add__type').value,
-                    desc: document.querySelector('.add__description').value,
-                    value: document.querySelector('.add__value').value
+                    type: document.querySelector(DOMStrings.inputType).value,
+                    desc: document.querySelector(DOMStrings.inputDesc).value,
+                    value: document.querySelector(DOMStrings.inputValue).value
                 };
           }
     };
 })();
 
 var controller = (function(budgetCtrl, UICtrl) {
-
     var ctrlAddItem = function() {
         // 1. Get the field data
+        var input = UICtrl.getInput();
+        console.log(input);
         // 2. add the item to budget controller
         // 3. add the item to the UI
         // 4. calculate budget
